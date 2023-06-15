@@ -38,7 +38,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
+import rakib.hasan.composewithclean_navigationdrawer.R
 import rakib.hasan.composewithclean_navigationdrawer.presentation.components.AppBar
+import rakib.hasan.composewithclean_navigationdrawer.presentation.components.DrawerItem
 import rakib.hasan.composewithclean_navigationdrawer.ui.theme.ComposeWithClean_NavigationDrawerTheme
 
 class MainActivity : ComponentActivity() {
@@ -51,7 +53,6 @@ class MainActivity : ComponentActivity() {
                 val scope = rememberCoroutineScope()
                 val items = listOf(Icons.Default.Favorite, Icons.Default.Face, Icons.Default.Email)
                 val selectedItem = remember { mutableStateOf(items[0]) }
-
                 ModalNavigationDrawer(
                     drawerState = drawerState,
                     drawerContent = {
@@ -95,7 +96,6 @@ class MainActivity : ComponentActivity() {
                                 Text(text = if (drawerState.isClosed) "This is main text" else "")
                             }
                         }
-
                     }
                 )
             }
