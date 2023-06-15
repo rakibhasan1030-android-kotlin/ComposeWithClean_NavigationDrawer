@@ -10,7 +10,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import rakib.hasan.composewithclean_navigationdrawer.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -19,6 +22,8 @@ fun AppBar(
     onNavigationIconClick: () -> Unit
 ) {
     TopAppBar(
+        modifier = Modifier
+            .shadow(4.dp),
         title = {
             Text(text = stringResource(id = R.string.app_name))
         },
